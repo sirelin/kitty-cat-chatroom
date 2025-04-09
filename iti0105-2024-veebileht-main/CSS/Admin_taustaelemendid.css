@@ -1,0 +1,55 @@
+@view-transition {
+    navigation: auto;
+}
+
+body {
+
+    background-image: url(../Elements/admin_taust.jpg);
+    background-repeat: repeat;
+    background-color: rgba(255, 254, 242, 0.5);
+    background-blend-mode: lighten;
+    font-family: 'Irish Grover';
+    overflow-x: hidden;
+
+    .pais {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 89px;
+        background-color: #F39BB1;
+        color: #FFFEF2;
+
+        .post-title {
+            position: relative;
+            right: 15px;
+            font-size: 50px;
+            font-weight: normal;
+            color: #FFFEF2;
+        }
+    }
+}
+.tagasi {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: 80%;
+    top: 15%;
+}
+
+
+@media (max-width: 768px) {
+    body .pais .post-title {
+        font-size: 31px;
+        right: 5px;
+    }
+    .tagasi {
+        width: 30px;
+        height: 30px;
+        right: 78%;
+        top: 35%;
+    }
+}

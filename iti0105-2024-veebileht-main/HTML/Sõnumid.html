@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Messages</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="../JS/cursor.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<script src="../Firebase/firebase.js" type="module"></script>
+    <script src="../JS/NavBar.js" type="module"></script>
+    <script src="../JS/MessagesList.js" type="module"></script>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../CSS/NavBar.css">
+    <link rel="stylesheet" href="../CSS/Taustaelemendid.css">
+    <link rel="stylesheet" href="../CSS/Sõnumid.css">
+
+</head>
+
+<body>
+    <div class="pais">
+        <h1 class = "post-title">Kitty Cat Chatroom</h1>
+    </div>
+
+    <div id="app">
+
+        <nav class="navbar">
+            <a href="Profiil.html">PROFILE</a>
+            <a href="Foorum.html">FORUM</a>
+            <a href="Sõnumid.html">MESSAGES</a>
+        </nav>
+
+    <chat-sidebar></chat-sidebar>
+    <chat-component></chat-component>
+
+    </div>
+
+    <script type="module">
+        import { NavBar } from '../JS/NavBar.js';
+        import { MessagesList} from "../JS/MessagesList.js";
+        import { ChatComponent} from "../JS/MessagesList.js";
+
+        const app = Vue.createApp({});
+        app.component('nav-bar', NavBar);
+        app.component('chat-sidebar', MessagesList);
+        app.component('chat-component', ChatComponent)
+        app.mount('#app');
+    </script>
+    <script src="../Firebase/getUserInfo.js" type="module"></script>
+    <script src="../Firebase/timeAgo.js" type="module"></script>
+	<script src="../Firebase/Messages/addMessage.js" type="module"></script>
+</body>
+
+</html>

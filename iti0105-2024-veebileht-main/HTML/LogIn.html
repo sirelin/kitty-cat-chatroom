@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kitty Cat Chatroom</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Taustaelemendid_login_register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+
+    <script src="../Firebase/firebase.js" type="module"></script>
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html">Kitty Cat Chatroom</a>
+    </header>
+
+    <p class="h1" style="top: 20%">LOG IN</p>
+    <p class="h2" style="top: 35%;">Email address</p>
+
+    <div>
+        <input type="text" id="email" placeholder="Email">
+    </div>
+
+    <p class="h2" style="top: 51%;">Password</p>
+
+    <div style="top: 59%; left: 50%; position: absolute;">
+        <input type="password" id="password" placeholder="Password">
+    </div>
+
+    <div>
+        <button id="signInButton" class="roheline_nupp" style="top: 80%">Log in</button>
+        <script type="module">
+        import { signIn } from "../Firebase/Authentication/signIn.js";
+
+        document.getElementById('signInButton').addEventListener('click', signIn)
+        </script>
+    </div>
+
+    <div>
+        <p class="h3" style="top: 90%">Don’t have an acount?</p>
+        <a class="h4" style="top: 95%" href="Register.html">Register</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,275 @@
+@view-transition {
+    navigation: auto;
+}
+
+body {
+    font-family: "Irish Grover";
+    color: #FFFEF2;
+}
+
+.leave-comment {
+    height: 86px;
+    width: 785px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    background: #f39bb1;
+    border-radius: 16px;
+
+
+    .leave-comment-pfp {
+        height: 40px;
+        width: 40px;
+        position: relative;
+        top: 0;
+        right: 625px;
+        display: flex;
+        align-items: center;
+        background: #F9DFC0;
+        border-radius: 50%;
+        justify-content: center;
+    }
+
+    .leave-comment-pfp-cat {
+        width: 38px;
+        height: 35px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .leave-comment-text {
+        height: 46px;
+        width: 540px;
+        position: relative;
+        top: 0;
+        left: 85px;
+        display: flex;
+        align-items: center;
+        background: #f4c3c3;
+        border-radius: 6px;
+        font-family: "Irish Grover";
+        color: #FFFEF2;
+        font-size: 17px;
+        border: none;
+    }
+
+    .leave-comment-text:focus {
+        outline: none;
+    }
+
+    .leave-comment-text::placeholder {
+    color: #FFFEF2;
+}
+
+    .leave-comment-button {
+        height: 46px;
+        width: 112px;
+        position: relative;
+        top: 0;
+        left: 100px;
+        display: flex;
+        align-items: center;
+        background: #2b5e48;
+        border-radius: 6px;
+        justify-content: center;
+    }
+
+}
+
+.hr1 {
+    width: 640px;
+    background-color: #2b5e48;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.comment-container {
+    position: relative;
+
+}
+
+.comment-box {
+    background-color: #448D70;
+    color: #FFFEF2;
+    width: 785px;
+    height: min-content;
+
+    border-radius: 16px;
+    position: relative;
+    top: 40%;
+    margin-bottom: 20px;
+}
+
+.content {
+    margin: 20px;
+}
+
+.hr2 {
+    margin: 10px;
+}
+
+.likes {
+    font-size: 12px;
+    position: relative;
+    width: 30px;
+    top: -20px;
+    left: 4%;
+}
+
+.hide {
+    position: relative;
+    left: 65%;
+    top: -30px;
+}
+
+.reply {
+    position: absolute;
+    left: 87%;
+    bottom: 60px;
+}
+
+.reply2 {
+    position: absolute;
+    left: 88%;
+    bottom: 40px;
+}
+
+.hide_text {
+    position: relative;
+    left: 67%;
+    top: -48px;
+    font-size: 12px;
+    color: #F4C3C3;
+    width: 120px;
+}
+
+.reply_text {
+    position: relative;
+    left: 93%;
+    bottom: 60px;
+    font-size: 12px;
+    color: #F4C3C3;
+    width: 50px;
+}
+
+.reply_text2 {
+    position: relative;
+    left: 94%;
+    bottom: 40px;
+    font-size: 12px;
+    color: #F4C3C3;
+    width: 50px;
+}
+
+.comment-pic {
+    height: 125px;
+    width: auto;
+    margin: 2px;
+}
+
+.comment {
+    margin: 2px;
+    line-height: 50px;
+}
+
+.comment-pfp-circle {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    background-color: #FFFEF2;
+    margin-bottom: 10px;
+}
+
+.comment-pfp {
+    width: 28px;
+    height: 29px;
+}
+
+.comment-name {
+    position: relative;
+    font-size: 16px;
+    left: 50px;
+    top: 25px;
+    width: 200px;
+}
+.comment-info {
+    color: #F4C3C3;
+    left: 50px;
+    position: relative;
+    font-size: 14px;
+    top: 30px;
+    width: 200px;
+}
+
+.paw2 {
+    position: relative;
+    top: 90%;
+    color: #FFFEF2;
+}
+
+@media (max-width: 850px) {
+    .hr1 {
+        display: none;
+    }
+
+    .leave-comment {
+        width: 100%;
+    }
+
+    .leave-comment .leave-comment-pfp {
+        display: none;
+    }
+
+    .leave-comment .leave-comment-text {
+        left: 10px;
+        width: 60%;
+    }
+
+    .leave-comment .leave-comment-button {
+        left: 20px;
+    }
+
+    .comment-container {
+        max-width: 100%;
+    }
+
+    .comment-box {
+       max-width: 100%;
+    }
+
+    .likes {
+        left: 10%;
+    }
+
+    .hide {
+        left: 30%;
+        top: -35px;
+    }
+
+    .hide_text {
+        left: 35%;
+        top: -53px;
+    }
+
+    .reply {
+        left: 75%;
+        bottom: 65px;
+    }
+
+    .reply_text {
+        left: 86%;
+        bottom: 65px;
+    }
+
+    .reply2 {
+        left: 75%;
+    }
+
+    .reply_text2 {
+        left: 86%;
+    }
+}
+

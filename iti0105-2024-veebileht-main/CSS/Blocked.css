@@ -1,0 +1,14 @@
+@view-transition {
+    navigation: auto;
+}
+
+@media (max-width: 822px) {
+    td:before {
+        content: attr(data-label);
+        color: #6A7D6F;
+        justify-content: flex-end;
+    }
+
+    td:nth-child(1):before { content: "Username"; }
+    td:nth-child(2):before { content: "Reason"; }
+}
