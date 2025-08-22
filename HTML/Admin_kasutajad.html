@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin kasutajad</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../CSS/admin_kasutajad.css">
+    <link rel="stylesheet" href="../CSS/Admin_taustaelemendid.css">
+    <link rel="stylesheet" href="../CSS/Admin_tabelid.css">
+    <script src="https://unpkg.com/vue@3.2.0/dist/vue.global.prod.js"></script>
+
+    <script type="module" src="../JS/TableComponent.js"></script>
+	<script src="../Firebase/firebase.js" type="module"></script>
+	
+
+</head>
+<body>
+    <div class="pais">
+        <a href="Admin_home.html"><img class="tagasi" src="../Elements/Admin_tagasi.svg"/></a>
+        <h1 class = "post-title">Kitty Cat Chatroom</h1>
+    </div>
+
+    <div id="app">
+        <user-table></user-table>
+    </div>
+
+    <script type="module">
+        import { UserTable } from '../JS/TableComponent.js';
+        const app = Vue.createApp({
+            components: {
+                UserTable
+            }
+        });
+        app.component('user-table', UserTable);
+        app.mount('#app');
+    </script>
+
+</body>
+</html>

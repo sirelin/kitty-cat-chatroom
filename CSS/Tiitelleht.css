@@ -1,0 +1,148 @@
+@view-transition {
+    navigation: auto;
+}
+
+body {
+    font-size: 50px;
+    font-family: 'Irish Grover';
+}
+
+header {
+    font-size: 50px;
+    margin: 0;
+    position: absolute;
+    align-items: flex-end;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55%;
+    background-color: #2b5e48;
+
+    .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 2%);
+    }
+
+    .h1 {
+    color: #FFFEF2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nupp1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    background-color: #2b5e48;
+    color: #FFFEF2;
+    width: 350px;
+    height: 100px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nupp2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    color: #2b5e48;
+    width: 350px;
+    height: 100px;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+p {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2b5e48;
+    position: absolute;
+    top: 74%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nupp_admin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    background-color: #F39BB1;
+    color: #2b5e48;
+    width: 450px;
+    height: 100px;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px){
+    .nupp1 {
+        font-size: 30px;
+        background-color: #2b5e48;
+        color: #FFFEF2;
+        width: 200px;
+        height: 50px;
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .nupp2 {
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #2b5e48;
+        width: 200px;
+        height: 50px;
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    header .logo {
+        width: 300px;
+        height: 400px;
+        bottom: -100px;
+    }
+    header .h1 {
+        font-size: 30px;
+    }
+    p {
+        font-size: 30px;
+    }
+    .nupp_admin {
+        font-size: 30px;
+        width: 200px;
+        height: 50px;
+    }
+}

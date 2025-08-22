@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="../JS/cursor.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../Firebase/firebase.js" type="module"></script>
+    <script src="../JS/NavBar.js" type="module"></script>
+    <script src="../JS/PopularTags.js" type="module"></script>
+    <script src="../JS/Post.js" type="module"></script>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../CSS/Admin_taustaelemendid.css">
+    <link rel="stylesheet" href="../CSS/Admin_foorum.css">
+    <link rel="stylesheet" href="../CSS/PopularTags.css">
+    <link rel="stylesheet" href="../CSS/NavBar.css">
+
+</head>
+
+<body>
+    <div id="app">
+
+        <div class="pais">
+            <a href="Admin_home.html"><img class="tagasi" src="../Elements/Admin_tagasi.svg"/></a>
+            <h1 class = "post-title">Kitty Cat Chatroom</h1>
+        </div>
+
+        <popular-tags></popular-tags>
+
+        <div class="make-post">
+            <div class="make-post-text">Let’s share what’s going on your mind...</div>
+            <button class="make-post-button" onclick="togglePopup()">Create Paw-st</button>
+            <div class="make-post-pfp">
+                <div class="make-post-pfp-cat"></div>
+            </div>
+        </div>
+
+        <div class="popup-overlay" id="popupOverlay">
+            <div class="popup-content">
+                <button class="close-popup" onclick="togglePopup()">×</button>
+                <h2>Create a Paw-st</h2>
+                <form>
+                    <label for="post-title">Title</label>
+                    <input type="text" maxlength="80" id="post-title" class="input-title" placeholder="Enter your title..." required>
+
+                    <label for="post-content">Content</label>
+                    <textarea id="post-content" maxlength="1000" class="input-content" placeholder="What’s on your mind?" rows="4" required></textarea>
+
+                    <label for="post-hashtags">Hashtags</label>
+                    <input type="text" maxlength="50" id="post-hashtags" class="input-hashtags" placeholder="#cat #funny" required>
+
+                    <div class="file-upload-wrapper">
+                          <label for="file-upload" class="upload-button">
+                                Upload a Picture!
+                          </label>
+                          <input id="file-upload" type="file" @change="handleFileUpload" accept="image/png, image/jpeg" />
+                          <label class="submit-post-button" id="submit-post">Submit!</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="post-container">
+            <post></post>
+        </div>
+
+    </div>
+    <script>
+        function togglePopup() {
+            const popup = document.getElementById('popupOverlay');
+            popup.style.display = popup.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+    <script type="module">
+
+        import { NavBar } from '../JS/NavBar.js';
+        import { PopularTags } from '../JS/PopularTags.js';
+        import { PawLikeButton } from '../JS/Post.js';
+        import { Post } from '../JS/Post.js';
+        const app = Vue.createApp()
+        app.component('nav-bar', NavBar);
+        app.component('popular-tags', PopularTags);
+        app.component('paw-like-button', PawLikeButton);
+        app.component('post', Post);
+        app.mount('#app');
+    </script>
+	 <script src="../Firebase/getUserInfo.js" type="module"></script>
+	<script src="../Firebase/uploadImg.js" type="module"></script>
+	<script type="module">
+		import { addPostInfo } from "../Firebase/Forum/addPost.js";
+
+		document.getElementById("submit-post").addEventListener("click", async function(){
+			const submitted = await addPostInfo();
+			if (submitted) {
+				togglePopup();
+			}
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+@view-transition {
+    navigation: auto;
+}
+
+body {
+    justify-items: center;
+}
+
+
+.blocked-table-container table {
+
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: "Irish Grover";
+    margin-top: 150px;
+}
+
+
+.blocked-table-container th {
+    background-color: #F39BB1;
+    color: #2b5e48;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #F4C3C3;
+    font-size: 32px;
+    height: 58px;
+    width: 226px;
+}
+
+.blocked-table-container td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #F39BB1;
+    color: #2b5e48;
+    background-color: #F4C3C3;
+    font-size: 20px;
+    height: 65px;
+    width: 226px;
+}
+.blocked-table-container th:nth-child(2),
+.blocked-table-container td:nth-child(2) {
+    width: fit-content;
+    height: fit-content;
+}
+
+.blocked-table-container th:nth-child(3),
+.blocked-table-container td:nth-child(3) {
+    text-align: center;
+}
+
+.blocked-table-container .unblock {
+        padding: 10px 20px;
+        font-family: "Irish Grover";
+        background-color: #F39BB1;
+        color: #2b5e48;
+        border: none;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        text-transform: capitalize;
+        font-size: 20px;
+}
+
+
+.users-table-container table {
+
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: "Irish Grover";
+    margin-top: 150px;
+}
+
+
+.users-table-container th {
+    background-color: #F39BB1;
+    color: #2b5e48;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #F4C3C3;
+    font-size: 32px;
+    height: 58px;
+    width: 226px;
+}
+
+.users-table-container td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #F39BB1;
+    color: #2b5e48;
+    background-color: #F4C3C3;
+    font-size: 20px;
+    height: 65px;
+    width: 226px;
+}
+
+
+.users-table-container th:nth-child(5),
+.users-table-container td:nth-child(5) {
+    text-align: center;
+}
+
+.users-table-container .block {
+    padding: 10px 20px;
+    font-family: "Irish Grover";
+    background-color: #F39BB1;
+    color: #2b5e48;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+
+@media (max-width: 822px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        justify-items: center;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 10px;
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        border: none;
+        height: auto;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+
+
+    }
+    th:nth-child(2), td:nth-child(2) {
+        max-width: 226px;
+        height: fit-content;
+    }
+}

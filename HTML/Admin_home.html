@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../CSS/Admin_taustaelemendid.css">
+    <link rel="stylesheet" href="../CSS/Admin_home.css">
+    <script src="https://unpkg.com/vue@3.2.0/dist/vue.global.prod.js"></script>
+
+    <script type="module" src="../JS/RecentLogins.js"></script>
+    <script src="../Firebase/firebase.js" type="module"></script>
+
+
+</head>
+<body>
+
+    <div class="pais">
+        <a href="index.html" class="post-title">Kitty Cat Chatroom</a>
+    </div>
+
+    <div class="nuppude_konteiner">
+
+        <a href="Admin_kasutajad.html">
+            <div class="roosa_kast">
+                <img class="ikoon" src="../Elements/all.svg"/>
+                <h2>All users</h2>
+            </div>
+        </a>
+        <a href="Admin_foorum.html">
+            <div class="roosa_kast">
+                <img class="ikoon" src="../Elements/forum.svg"/>
+                <h2>Forum</h2>
+            </div>
+        </a>
+        <a href="Blocked.html">
+            <div class="roosa_kast">
+                <img class="ikoon" src="../Elements/blocked.svg"/>
+                <h2>Blocked users</h2>
+            </div>
+        </a>
+        <a href="Admin_helpdesk.html">
+            <div class="roosa_kast">
+                <img class="ikoon" src="../Elements/helpdesk.svg"/>
+                <h2>Helpdesk</h2>
+            </div>
+        </a>
+    </div>
+
+    <div id="app">
+        <recent-logins></recent-logins>
+    </div>
+
+    <script type="module">
+        import { RecentLogins } from '../JS/RecentLogins.js';
+        const app = Vue.createApp({
+            components: {
+                RecentLogins
+            }
+        });
+        app.component('recent-logins', RecentLogins);
+        app.mount('#app');
+    </script>
+
+</body>
+</html>
