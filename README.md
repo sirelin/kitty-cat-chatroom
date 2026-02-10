@@ -1,15 +1,14 @@
-### iti0105-2024-veebileht
 # Kitty Cat Chatroom
-##### Autorid:
+##### Authors:
 * Sirelin P
 * Liis R
 * Egert A
-## Projekti käivitamine
-1. Clone'i repository oma eelistatud arenduskeskkonda. Vaata üle, et kõik failid oleks olemas.
-2. Jooksuta programmis fail index.html oma valitud brauseris.
-3. Võid ennast registreerida kasutajaks või logida sisse test kasutajaga (test@example.com Testing1)
-4. Kui oled sisse loginud, saad ligi igale kasutajale mõeldud lehele.
-5. Välja saab logida profiililehel Log Out nupust.
+## Running the project
+1. Clone the repository into your preferred IDE. Make sure you have all the files. 
+2. Run the index.html file.
+3. You can sign up or log in with the test account (test@example.com Testing1)
+4. Once you've logged in, you can access every page with default user permissions.
+5. Välja saab logida profiililehel Log Out nupust. 
 6. Admin vaate jaoks suundu tagasi index.html lehele.
 7. Vajuta päises asuvat pealkirja "Kitty Cat Chatroom".
 8. Avaneb admini tiitelleht, kasuta sisselogimiseks test kasutajat, millel on admin õigused (test@example.com Testing1).
@@ -33,5 +32,6 @@ Meie valitud teema on sotsiaalmeedia platvorm. Idee seisneb selles: tegemist on 
 Persoona, kellele meie leht suunatud on 15-aastane neiu Sofia, kes soovib peale kooli oma sõbrannadega edasi rääkida läbi veebi. Talle meeldib joonistamine, fotograafia, meeldib pidada nimekirjasid oma lemmikutest asjadest ning oma kassist pilte teha. Meie projekti kaudu saaks ta oma nimekirjasid lemmikutest asjadest, pilte kassidest ning oma joonistusi sõpradega jagada.
 
 Idee tekkis mõeldes platvormidele nagu Instagram - https://www.instagram.com/, Twitter/X https://x.com/, Rate (kunagine rate.ee), Reddit - https://www.reddit.com/. Instagram on põhiliselt piltide ja videode jagamiseks, nüüdseks on sinna lisandunud story'd ja reels'id, tütarrakendus Threads, mis teevad Instagramist populaarse platvormi. Meie Kitty Cat Chatroom on põhiliselt nagu foorum - postitamise pool on mõeldud kindlates teemades ja sektsioonides, pildid jääksid profiilile. Twitter/X-i erinevuseks on samamoodi see, et tegemist ei ole otseselt sinu lehega, kuhu postitad tweete, vaid võtad osa olemasolevatest kindlatest teemadest. Reddit'i erinevuseks on see, et sul on oma profiil ja kass, kes on customizable. Tegemist on teismelistele suunatud platvormiga, kus saab jagada oma huve ja veeta aega, kasutades ära nunnusid kiisusid.
+
 
 
